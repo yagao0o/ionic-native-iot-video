@@ -1,0 +1,20 @@
+{
+  "description": "Ionic Native - Native plugins for ionic apps:Chinamobile Iot Video Plugin For Cordova",
+  "module": "index.js",
+  "typings": "index.d.ts",
+  "author": "luyz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ionic-team/ionic-native.git"
+  },
+  "name": "@ionic-native/iot-video",
+  "dependencies": {
+    "@types/cordova": "latest"
+  },
+  "peerDependencies": {
+    "rxjs": "^5.5.0 || ^6.5.0",
+    "@ionic-native/core": "^5.1.0"
+  },
+  "version": "0.1.0"
+}
