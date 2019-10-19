@@ -1,20 +1,20 @@
 import { IonicNativePlugin } from '@ionic-native/core';
 /**
- * @name Iot Video
+ * @name iot-video
  * @description
  * This plugin does something
  *
  * @usage
  * ```typescript
- * import { IotVideo } from '@ionic-native/iot-video';
+ * import { iot-video } from '@ionic-native/iot-video';
  *
  *
- * constructor(private iotVideo: IotVideo) { }
+ * constructor(private iot-video: iot-video) { }
  *
  * ...
  *
  *
- * this.iotVideo.functionName('Hello', 123)
+ * this.iot-video.functionName('Hello', 123)
  *   .then((res: any) => console.log(res))
  *   .catch((error: any) => console.error(error));
  *
@@ -30,15 +30,31 @@ export declare class IotVideo extends IonicNativePlugin {
     /**
      * 初始化视频服务配置
      * @param configJson {string} 视频服务配置项目, 参考 cordova-iot-video-plugin 中说明
+     * @param accessToken {string} 当前用户token
      * @return {Promise<any>} 返回初始化结果
      */
-    initClient(configJson: string): Promise<string>;
+    initClient(configJson: string, accessToken: string): Promise<string>;
     /**
      * 连接作战室
      * @param accessToken {string} 用户登录token
      * @param roomId {string} 房间号
-     * @param userId {string} 用户Id
-     * @return {Promise<any>} 返回连接结果
+     * @return {Promise<any>} 返回结果
      */
-    joinRoom(accessToken: string, roomId: string, userId: string): Promise<any>;
+    joinRoom(accessToken: string, roomId: string): Promise<any>;
+    /**
+     * 受到邀请,跳转房间
+     * @param configSetting {string} 房间跳转设置
+     * @return {Promise<any>} 返回结果
+     */
+    changeRoom(configSetting: string): Promise<any>;
+    /**
+     * 用户退出登陆
+     * @return {Promise<any>} 返回结果
+     */
+    videoLogout(): Promise<any>;
+    /**
+     * ⽤用户退出应⽤用
+     * @return {Promise<any>} 返回结果
+     */
+    initDisconnet(): Promise<any>;
 }
